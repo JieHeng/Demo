@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="load_data">Load data</string>
+    <string name="sort_by_name">Sort by name</string>
+    <string name="empty_list_load_data_first">Empty list, please load the data first.</string>
+</resources>

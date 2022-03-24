@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="@dimen/space16"
+    tools:context=".ui.DemoActivity">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_container_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:name="com.example.demo.ui.CurrencyListFragment"
+        android:layout_marginBottom="@dimen/space16"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/br_buttons" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/br_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="btn_load_data, btn_sort_by_name"/>
+
+    <Button
+        android:id="@+id/btn_load_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/load_data"
+        android:layout_marginStart="@dimen/space16"
+        android:layout_marginEnd="@dimen/space8"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_sort_by_name" />
+
+    <Button
+        android:id="@+id/btn_sort_by_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sort_by_name"
+        android:textAllCaps="false"
+        android:layout_marginEnd="@dimen/space16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn_load_data"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
